@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1. 博客配置</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e593a7eb.css" as="style"><link rel="preload" href="/assets/js/app.a98cb114.js" as="script"><link rel="preload" href="/assets/js/2.82fd9f42.js" as="script"><link rel="preload" href="/assets/js/14.94aeb365.js" as="script"><link rel="prefetch" href="/assets/js/10.18c17aa5.js"><link rel="prefetch" href="/assets/js/11.34cf3414.js"><link rel="prefetch" href="/assets/js/12.beae58c9.js"><link rel="prefetch" href="/assets/js/13.338ed3aa.js"><link rel="prefetch" href="/assets/js/15.c2b0fca2.js"><link rel="prefetch" href="/assets/js/16.ab12b758.js"><link rel="prefetch" href="/assets/js/17.d8809bbb.js"><link rel="prefetch" href="/assets/js/3.f5ecf5b7.js"><link rel="prefetch" href="/assets/js/4.1012ae06.js"><link rel="prefetch" href="/assets/js/5.2af73aed.js"><link rel="prefetch" href="/assets/js/6.1dc28351.js"><link rel="prefetch" href="/assets/js/7.ec145236.js"><link rel="prefetch" href="/assets/js/8.014116c2.js"><link rel="prefetch" href="/assets/js/9.2bfba5b7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e593a7eb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-博客配置"><a href="#_1-博客配置" class="header-anchor">#</a> 1. 博客配置</h2> <h3 id="基础配置"><a href="#基础配置" class="header-anchor">#</a> 基础配置</h3> <ul><li><p>全局安装</p> <div class="language-js extra-class"><pre class="language-js"><code>npm install <span class="token operator">-</span>g vuepress
+</code></pre></div></li> <li><p>创建博客目录</p> <div class="language-js extra-class"><pre class="language-js"><code>mkdir vuepress<span class="token operator">-</span>blog <span class="token comment">//创建博客文件夹</span>
+</code></pre></div></li> <li><p>项目初始化</p></li> <li><p>初始化后会生成一个<code>package.json</code>文件</p></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>cd vuepress<span class="token operator">-</span>blog <span class="token comment">//进入博客文件夹</span>
+npm init <span class="token operator">-</span>y <span class="token comment">//初始化博客</span>
+</code></pre></div><ul><li>在当前目录中创建一个<code>docs</code>目录</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>mkdir docs <span class="token comment">//主要存放博客书籍内容</span>
+</code></pre></div><ul><li>首页内容书写(默认主题提供)   READM.md  博客首页文件</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">--</span><span class="token operator">-</span>
+home<span class="token operator">:</span> <span class="token boolean">true</span>
+heroImage<span class="token operator">:</span> <span class="token operator">/</span>logo<span class="token punctuation">.</span>jpg
+actionText<span class="token operator">:</span> 快速上手 →
+actionLink<span class="token operator">:</span> <span class="token operator">/</span>zh<span class="token operator">/</span>guide<span class="token operator">/</span>
+features<span class="token operator">:</span>
+<span class="token operator">-</span> title<span class="token operator">:</span> 简洁至上
+  details<span class="token operator">:</span> 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+<span class="token operator">-</span> title<span class="token operator">:</span> Vue驱动
+  details<span class="token operator">:</span> 享受 Vue <span class="token operator">+</span> webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+<span class="token operator">-</span> title<span class="token operator">:</span> 高性能
+  details<span class="token operator">:</span> VuePress 为每个页面预渲染生成静态的 <span class="token constant">HTML</span>，同时在页面被加载的时候，将作为 <span class="token constant">SPA</span> 运行。
+footer<span class="token operator">:</span> <span class="token constant">MIT</span> Licensed <span class="token operator">|</span> Copyright © <span class="token number">2018</span><span class="token operator">-</span>present Evan You
+<span class="token operator">--</span><span class="token operator">-</span><span class="token number">2.</span>
+</code></pre></div><h3 id="核心配置"><a href="#核心配置" class="header-anchor">#</a> 核心配置</h3> <ul><li>在<code>docs</code>目录下创建<code>.vuepress</code>目录</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>cd docs
+mkdir <span class="token punctuation">.</span>vuepress <span class="token comment">//主要存放配置</span>
+</code></pre></div><ul><li>新建总配置文件<code>config.js</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code>cd <span class="token punctuation">.</span>vuepress
+touch config<span class="token punctuation">.</span>js <span class="token comment">//config是整个项目的核心配置文件，所有菜单、导航栏相关的配置均配置在该模块中</span>
+</code></pre></div><h2 id="_2-目录结构"><a href="#_2-目录结构" class="header-anchor">#</a> 2. 目录结构：</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">-</span> vuepress<span class="token operator">-</span>blog
+	<span class="token operator">-</span> docs 
+		<span class="token operator">-</span><span class="token punctuation">.</span>vuepress <span class="token comment">//配置博客的文件</span>
+        	<span class="token operator">-</span> <span class="token keyword">public</span> <span class="token comment">//存放博客的静态资源的：如图片，css,js文件</span>
+            <span class="token operator">-</span> config<span class="token punctuation">.</span>js <span class="token comment">//配置网站的侧边栏，头部导航条； 博客的总配置文件</span>
+			<span class="token operator">-</span> nav<span class="token punctuation">.</span>js <span class="token comment">//配置头部导航栏</span>
+			<span class="token operator">-</span> sidebar<span class="token punctuation">.</span>js <span class="token comment">//配置导航侧边栏</span>
+        <span class="token operator">-</span> <span class="token constant">READM</span><span class="token punctuation">.</span>md <span class="token comment">//博客首页文件</span>
+	<span class="token operator">-</span><span class="token keyword">package</span><span class="token punctuation">.</span>json<span class="token comment">//npm init 初始化项目</span>
+</code></pre></div><h3 id=""><a href="#" class="header-anchor">#</a></h3></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a98cb114.js" defer></script><script src="/assets/js/2.82fd9f42.js" defer></script><script src="/assets/js/14.94aeb365.js" defer></script>
+  </body>
+</html>

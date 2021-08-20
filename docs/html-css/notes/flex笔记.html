@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>flex布局</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e593a7eb.css" as="style"><link rel="preload" href="/assets/js/app.a98cb114.js" as="script"><link rel="preload" href="/assets/js/2.82fd9f42.js" as="script"><link rel="preload" href="/assets/js/16.ab12b758.js" as="script"><link rel="prefetch" href="/assets/js/10.18c17aa5.js"><link rel="prefetch" href="/assets/js/11.34cf3414.js"><link rel="prefetch" href="/assets/js/12.beae58c9.js"><link rel="prefetch" href="/assets/js/13.338ed3aa.js"><link rel="prefetch" href="/assets/js/14.94aeb365.js"><link rel="prefetch" href="/assets/js/15.c2b0fca2.js"><link rel="prefetch" href="/assets/js/17.d8809bbb.js"><link rel="prefetch" href="/assets/js/3.f5ecf5b7.js"><link rel="prefetch" href="/assets/js/4.1012ae06.js"><link rel="prefetch" href="/assets/js/5.2af73aed.js"><link rel="prefetch" href="/assets/js/6.1dc28351.js"><link rel="prefetch" href="/assets/js/7.ec145236.js"><link rel="prefetch" href="/assets/js/8.014116c2.js"><link rel="prefetch" href="/assets/js/9.2bfba5b7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e593a7eb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="flex布局"><a href="#flex布局" class="header-anchor">#</a> flex布局</h2> <h5 id="_1-弹性盒由"><a href="#_1-弹性盒由" class="header-anchor">#</a> 1.弹性盒由</h5> <h5 id="容器-父元素"><a href="#容器-父元素" class="header-anchor">#</a> 容器(父元素)</h5> <h5 id="项目-子元素"><a href="#项目-子元素" class="header-anchor">#</a> 项目(子元素)</h5> <h5 id="组成"><a href="#组成" class="header-anchor">#</a> 组成</h5> <h5 id="_2-如果要写弹性盒了"><a href="#_2-如果要写弹性盒了" class="header-anchor">#</a> 2.如果要写弹性盒了</h5> <div class="language-html extra-class"><pre class="language-html"><code>父元素{
+	display:flex;
+}
+</code></pre></div><h3 id="_3-容器-父元素-属性"><a href="#_3-容器-父元素-属性" class="header-anchor">#</a> 3.容器(父元素)属性</h3> <div class="language-html extra-class"><pre class="language-html"><code>一共有六个属性:
+	flex-direction 决定了主轴的的方向(即项目排列方向)
+		flex-direction的值有:
+			row:(左对齐)主轴为水平方向,起点在左端
+			row-reverse:(右对齐)主轴为水平方向,起点在右端
+			column:主轴为垂直方向,起点在上沿
+			column-reverse:主轴为垂直方向,起点在下沿
+	flex-wrap 可以让项目(子元素)换行
+		flex-wrap的值有:
+			nowrap:默认值, 弹性容器默认为单行,该情况下弹性子项可能会溢出容器。
+			wrap:弹性容器为多行,该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行
+			wrap-reverse:沿着侧轴反方向换行
+	flex-flow direction和wrap的集合 flex-flow包含了direction和wrap里面所有的值
+		正常写direction和wrap需要写俩条
+			比如: flex-direction:row;
+				 flex-wrap:nowrap;
+		使用了flex-flow写一条就可以
+			比如: flex-flow:row nowarp
+				 flex-flow:可以使用direction和wrap里的所有
+	justify-content 定义项目(子元素)在主轴的对齐方式
+		justify-content的值:
+			flex-start:默认值,左对齐
+			flex-end:右对齐
+			center:居中对齐
+			space-between:弹性项目平均分布在该行上,前后没有空间
+			space-around:弹性项目平均分布在该行上，两边留有一半的间隔空间
+			space-evenly:弹性项目平均分布在该行上，平均分配间隔空间,兼容性不好
+	align-items 定义项目在交叉轴(纵轴)上如何对齐
+		align-items的值:
+			flex-start:侧轴起始位置(上,不改变主轴方向的前提)
+			flex-end:侧轴结束位置(下,不改变主轴方向的前提)
+			center:侧轴居中对齐
+			baseline:基线对齐
+			stretch:默认值,将行于行之间的高度设置为相同的值,以最长的高度为准
+	align-content: 定义侧轴空白空间分布
+		align-content的值和justify-content里的值一样,这个不常用
+</code></pre></div><h3 id="_4-项目-子元素-属性"><a href="#_4-项目-子元素-属性" class="header-anchor">#</a> 4.项目(子元素)属性</h3> <div class="language-html extra-class"><pre class="language-html"><code>order 数字越大越靠后,默认为0,数字相同按照标签顺序排列
+
+flex-grow(扩大项目) 定义项目的放大比率,默认0,只有容器有剩余空间才能扩大
+	1.可以把容器的剩余空间沾满
+	2.可以定义占剩余空间的份数
+
+flex-shrink(缩小项目)定义了项目的缩小比率,默认1,如果空间不足,该项目将缩小,那个项目(子元素)设置了flex-shrink,那个项目就按照设置的值缩小,默认值1,缩小1份
+	
+flex-basis 和width差不多 ,定义弹性盒子元素的默认基准值
+
+flex 是flex-grow flex-shrink flex-basis的简写 默认值为0 1 auto
+
+align-self:用来覆盖当前弹性元素的align-items的值,相当于单独给某个项目设置align-items值 //写在想要单独改变align-items的项目上
+</code></pre></div><h3 id="_5-尺寸单位"><a href="#_5-尺寸单位" class="header-anchor">#</a> 5.尺寸单位</h3> <div class="language-html extra-class"><pre class="language-html"><code>px
+%:相对于父元素宽高
+
+底下这三个在ie8及以下不兼容
+vw\vh :相对于视口来说
+em : 针对于父元素的font-size,
+	1em相当于父元素的font-size的px
+	1em=16px
+rem: 针对于根元素(html)的font-size的px
+	1rem相当于根元素的font-size的px
+	写移动端使用rem,rem知道html的font-size就可以了,em还需要计算父元素的font-size这样每次嵌套都需要计算比较麻烦,所以使用rem比较方便
+谷歌浏览器字体大小默认是:16px
+
+
+物理像素:手机终端真实像素: iphone6:750x1334像素 
+设备独立像素(写代码的px像素):浏览器模拟手机的像素: 375(宽)×667(高)
+dpr: 设备像素比，物理像素/设备独立像素 = dpr， 一般以 Iphon6 的 dpr 为准 dpr = 
+2  750/375=2,所以像素比是2
+
+rpx:小程序独有的单位,规定任何设备屏幕下宽度为 750rpx;小程序会根据屏幕的宽度不同自动计算 rpx 值的大小
+d) Iphone6 下： 1rpx = 1 物理像素 = 0.5px
+
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a98cb114.js" defer></script><script src="/assets/js/2.82fd9f42.js" defer></script><script src="/assets/js/16.ab12b758.js" defer></script>
+  </body>
+</html>
